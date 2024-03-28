@@ -1,0 +1,58 @@
+#
+# This is the canonical configuration for the `README.md`
+# Run `make readme` to rebuild the `README.md`
+#
+
+# Name of this project
+name: Terraform AWS Client VPN
+
+# License of this project
+license: "APACHE"
+
+# Canonical GitHub repo
+github_repo: https://github.com/slovink/terraform-aws-client-vpn
+
+# Badges to display
+badges:
+  - name: "Latest Release"
+    image: "https://img.shields.io/github/release/slovink/terraform-aws-client-vpn.svg"
+    url: "https://github.com/slovink/terraform-aws-client-vpn/releases/latest"
+  - name: "tfsec"
+    image: "https://github.com/slovink/terraform-aws-client-vpn/actions/workflows/tfsec.yml/badge.svg"
+    url: "https://github.com/slovink/terraform-aws-client-vpn/actions/workflows/tfsec.yml"
+  - name: "Licence"
+    image: "https://img.shields.io/badge/License-APACHE-blue.svg"
+    url: "LICENSE.md"
+
+prerequesties:
+  - name: Terraform 1.7.0
+    url: https://learn.hashicorp.com/terraform/getting-started/install.html
+
+#  description of this project
+description: |-
+  Terraform module to create Client VPN resource on AWS.
+
+# extra content
+include:
+  - "terraform.md"
+
+# How to use this project
+usage: |-
+  ### Simple Example
+  Here is an example of how you can use this module in your inventory structure:
+    ```hcl
+    module "vpn" {
+        source              = "../"
+
+        name                = local.name
+        environment         = local.environment
+        split_tunnel_enable = true
+        cidr_block          = "172.0.0.0/16"
+        vpc_id              = module.vpc.vpc_id
+        subnet_ids          = module.subnets.public_subnet_id
+        route_cidr          = ["0.0.0.0/0", "0.0.0.0/0"]
+        security_group_ids  = [""]
+        route_subnet_ids    = module.subnets.public_subnet_id
+        network_cidr        = ["0.0.0.0/0"]
+    }
+  ```
