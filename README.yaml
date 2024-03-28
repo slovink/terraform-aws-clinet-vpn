@@ -10,7 +10,7 @@ name: Terraform AWS Client VPN
 license: "APACHE"
 
 # Canonical GitHub repo
-github_repo: https://github.com/slovink/terraform-aws-client-vpn
+github_repo: https://github.com/slovink/terraform-aws-clinet-vpn
 
 # Badges to display
 badges:
@@ -18,8 +18,8 @@ badges:
     image: "https://img.shields.io/github/release/slovink/terraform-aws-client-vpn.svg"
     url: "https://github.com/slovink/terraform-aws-client-vpn/releases/latest"
   - name: "tfsec"
-    image: "https://github.com/slovink/terraform-aws-client-vpn/actions/workflows/tfsec.yml/badge.svg"
-    url: "https://github.com/slovink/terraform-aws-client-vpn/actions/workflows/tfsec.yml"
+    image: "https://github.com/slovink/terraform-aws-clinet-vpn/blob/master/.github/workflows/tfsec.yml"
+    url: "https://github.com/slovink/terraform-aws-clinet-vpn/blob/master/.github/workflows/tfsec.yml"
   - name: "Licence"
     image: "https://img.shields.io/badge/License-APACHE-blue.svg"
     url: "LICENSE.md"
@@ -42,7 +42,7 @@ usage: |-
   Here is an example of how you can use this module in your inventory structure:
     ```hcl
     module "vpn" {
-        source              = "../"
+        source              = "git@github.com:slovink/terraform-aws-clinet-vpn.git?ref=v1.0.0"
 
         name                = local.name
         environment         = local.environment

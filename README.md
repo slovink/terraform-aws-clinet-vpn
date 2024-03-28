@@ -14,7 +14,7 @@
 <a href="https://www.terraform.io">
   <img src="https://img.shields.io/badge/Terraform-v1.7.0-green" alt="Terraform">
 </a>
-<a href="https://github.com/slovink/terraform-aws-client-vpn/blob/main/LICENSE">
+<a href="https://github.com/slovink/terraform-aws-clinet-vpn/blob/master/LICENSE">
   <img src="https://img.shields.io/badge/License-APACHE-blue.svg" alt="Licence">
 </a>
 
@@ -46,20 +46,20 @@ This module has a few dependencies:
 This Terraform module creates an AWS client-vpn along with additional configuration options.
 
 ## Examples
-For detailed examples on how to use this module, please refer to the [Examples](https://github.com/slovink/terraform-aws-client-vpn/tree/master/example) directory within this repository.
+For detailed examples on how to use this module, please refer to the [Examples](https://github.com/slovink/terraform-aws-clinet-vpn/tree/master/example) directory within this repository.
 
 ## Author
 Your Name Replace **MIT** and **slovink** with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
 
 ## License
-This project is licensed under the **MIT** License - see the [LICENSE](https://github.com/slovink/terraform-aws-client-vpn/blob/master/LICENSE) file for details.
+This project is licensed under the **MIT** License - see the [LICENSE](https://github.com/slovink/terraform-aws-clinet-vpn/blob/master/LICENSE) file for details.
 
 
 
 ## Feedback
-If you come accross a bug or have any feedback, please log it in our [issue tracker](https://github.com/slovink/terraform-aws-client-vpn/issues), or feel free to drop us an email at [concat@slovink.com](concat@slovink.com).
+If you come accross a bug or have any feedback, please log it in our [issue tracker](https://github.com/slovink/terraform-aws-clinet-vpn/issues), or feel free to drop us an email at [concat@slovink.com](concat@slovink.com).
 
-If you have found it worth your time, go ahead and give us a ★ on [our GitHub](https://github.com/slovink/terraform-aws-client-vpn)!
+If you have found it worth your time, go ahead and give us a ★ on [our GitHub](https://github.com/slovink/terraform-aws-clinet-vpn)!
 
 
 
@@ -84,7 +84,7 @@ At [slovink][ https://slovink.com/], we offer expert guidance, implementation su
 Here is an example of how you can use this module in your inventory structure:
   ```hcl
   module "vpn" {
-      source              = "../"
+      source              = "git@github.com:slovink/terraform-aws-clinet-vpn.git?ref=v1.0.0"
       name                = "test-vpn"
       enabled             = true
       split_tunnel_enable = true
